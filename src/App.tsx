@@ -53,7 +53,7 @@ const HeroLogo = () => (
         className="pointer-events-none absolute inset-[-14%] rounded-full bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.22),rgba(229,185,90,0.08)_32%,transparent_68%)] blur-3xl"
       />
 
-      <div className="absolute inset-0 translate-x-[4%]">
+      <div className="absolute inset-0 translate-x-[6.2%]">
         <div
           aria-hidden="true"
           style={heroLogoMaskStyle}
