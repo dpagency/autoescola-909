@@ -40,12 +40,12 @@ const heroLogoMaskStyle = {
 } as const;
 
 const HeroLogo = () => (
-  <div className="mb-6 relative w-full max-w-[720px] px-4">
+  <div className="mb-6 relative w-full max-w-[860px] px-4">
     <motion.div
       initial={{ opacity: 0, y: 24, scale: 0.94, filter: 'blur(10px)' }}
       animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
       transition={{ duration: 1.2, delay: 0.35, ease: 'easeOut' }}
-      className="group relative mx-auto aspect-[16/7] w-full max-w-[680px]"
+      className="group relative mx-auto aspect-[16/7] w-full max-w-[820px]"
     >
       <motion.div
         animate={{ opacity: [0.22, 0.34, 0.22], scale: [0.98, 1.01, 0.98] }}
@@ -53,7 +53,7 @@ const HeroLogo = () => (
         className="pointer-events-none absolute inset-[-14%] rounded-full bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.22),rgba(229,185,90,0.08)_32%,transparent_68%)] blur-3xl"
       />
 
-      <div className="absolute inset-0 translate-x-[3.6%]">
+      <div className="absolute inset-0">
         <div
           aria-hidden="true"
           style={heroLogoMaskStyle}
