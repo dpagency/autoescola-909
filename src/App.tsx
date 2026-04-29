@@ -389,19 +389,6 @@ export default function App() {
             <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-400 tracking-widest uppercase">Identidade da Marca</div>
           </motion.div>
 
-          {/* Logo / ícone */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="md:col-span-5 rounded-3xl overflow-hidden relative glass-panel flex items-center justify-center aspect-video md:aspect-auto group"
-          >
-            <img src="/06.png" alt="Logotipo Autoescola 909" className="w-2/3 object-contain group-hover:scale-105 transition-transform duration-700" />
-            <div className="absolute inset-0 blueprint-grid opacity-30"></div>
-            <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-500 tracking-widest uppercase">Logotipo</div>
-          </motion.div>
-
           {/* Branding veicular */}
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
