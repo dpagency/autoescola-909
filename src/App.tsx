@@ -447,19 +447,34 @@ export default function App() {
           subtitle="Da frota às peças gráficas, a identidade 909 imprime confiança em cada detalhe."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl overflow-hidden aspect-[4/3] relative group"
-          >
-            <img src="/04.png" alt="Materiais Impressos Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div className="absolute bottom-6 left-6">
-              <div className="font-mono text-xs text-gray-400 tracking-widest uppercase mb-1">Materiais Impressos</div>
-              <p className="text-white font-display text-xl">Cartões, Pastas & Uniformes</p>
-            </div>
-          </motion.div>
+          <div className="flex flex-col gap-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="rounded-3xl overflow-hidden aspect-[16/10] relative group"
+            >
+              <img src="/04.png" alt="Materiais Impressos Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-6 left-6">
+                <div className="font-mono text-xs text-gray-400 tracking-widest uppercase mb-1">Materiais Impressos</div>
+                <p className="text-white font-display text-xl">Cartões, Pastas & Uniformes</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="glass-panel rounded-3xl p-10 flex-1 border border-white/5"
+            >
+              <h4 className="font-mono text-xs tracking-widest uppercase text-[var(--color-brand-gold)] mb-6">Identidade Completa</h4>
+              <p className="text-gray-300 font-light leading-relaxed text-lg">
+                Papelaria, uniformes e materiais de comunicação alinhados. Cada ponto de contato reforça a credibilidade e o profissionalismo da 909.
+              </p>
+            </motion.div>
+          </div>
 
           <div className="flex flex-col gap-6">
             <motion.div
@@ -471,21 +486,12 @@ export default function App() {
             >
               <img src="/03.png" alt="Frota Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-400 tracking-widest uppercase">Frota Identificada</div>
+              <div className="absolute bottom-6 left-6">
+                <div className="font-mono text-xs text-gray-400 tracking-widest uppercase mb-1">Frota Identificada</div>
+                <p className="text-white font-display text-xl">Envelopamento Premium & Presença Urbana</p>
+              </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="glass-panel rounded-3xl p-10 flex-1 border border-white/5"
-            >
-              <h4 className="font-mono text-xs tracking-widest uppercase text-[var(--color-brand-gold)] mb-6">Frota Identificada</h4>
-              <p className="text-gray-300 font-light leading-relaxed text-lg">
-                Veículos com envelopamento matte preto e apliques dourados reflexivos. Presença máxima nas vias, reconhecimento imediato da marca.
-              </p>
-            </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -493,9 +499,9 @@ export default function App() {
               transition={{ delay: 0.2 }}
               className="glass-panel rounded-3xl p-10 flex-1 border border-white/5"
             >
-              <h4 className="font-mono text-xs tracking-widest uppercase text-[var(--color-brand-gold)] mb-6">Identidade Completa</h4>
+              <h4 className="font-mono text-xs tracking-widest uppercase text-[var(--color-brand-gold)] mb-6">Frota Identificada</h4>
               <p className="text-gray-300 font-light leading-relaxed text-lg">
-                Papelaria, uniformes e materiais de comunicação alinhados. Cada ponto de contato reforça a credibilidade e o profissionalismo da 909.
+                Veículos com envelopamento matte preto e apliques dourados reflexivos. Presença máxima nas vias, reconhecimento imediato da marca.
               </p>
             </motion.div>
           </div>
