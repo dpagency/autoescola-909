@@ -375,35 +375,18 @@ export default function App() {
           subtitle="Uma identidade visual premium inspirada em dashboards automotivos e precisão de engenharia."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {/* Imagem grande - branding principal */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Identidade da marca */}
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="md:col-span-7 rounded-3xl overflow-hidden aspect-video relative group"
+            className="rounded-3xl overflow-hidden aspect-video relative group"
           >
             <img src="/08.png" alt="Identidade Visual Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-400 tracking-widest uppercase">Identidade da Marca</div>
-          </motion.div>
-
-          {/* Branding veicular */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-5 rounded-3xl overflow-hidden aspect-video relative group flex"
-          >
-            <div className="w-[74%] h-full overflow-hidden">
-              <img src="/03.png" alt="Frota Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="relative w-[26%] h-full">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            </div>
-            <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-400 tracking-widest uppercase">Identidade Veicular</div>
           </motion.div>
 
           {/* Mockup / aplicações */}
@@ -411,8 +394,8 @@ export default function App() {
             initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="md:col-span-7 rounded-3xl overflow-hidden aspect-video relative group"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="rounded-3xl overflow-hidden aspect-video relative group"
           >
             <img src="/02.png" alt="Aplicações da Marca 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -479,6 +462,18 @@ export default function App() {
           </motion.div>
 
           <div className="flex flex-col gap-6">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+              className="rounded-3xl overflow-hidden aspect-[16/10] relative group"
+            >
+              <img src="/03.png" alt="Frota Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-400 tracking-widest uppercase">Frota Identificada</div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
