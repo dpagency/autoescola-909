@@ -28,22 +28,43 @@ const Section = ({ children, className = '', id = '' }: { children: React.ReactN
 
 const WHATSAPP_URL = 'https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Autoescola%20909.';
 
+const heroLogoMaskStyle = {
+  WebkitMaskImage: "url('/07.svg')",
+  WebkitMaskRepeat: 'no-repeat',
+  WebkitMaskPosition: 'center',
+  WebkitMaskSize: 'contain',
+  maskImage: "url('/07.svg')",
+  maskRepeat: 'no-repeat',
+  maskPosition: 'center',
+  maskSize: 'contain',
+} as const;
+
 const HeroLogo = () => (
   <div className="mb-6 relative w-full max-w-[720px] px-4">
-    <div className="relative mx-auto aspect-[16/7] w-full max-w-[680px]">
-      <img
-        src="/07.svg"
-        alt="Logo Autoescola 909"
-        className="pointer-events-none h-full w-full object-contain opacity-20 [filter:brightness(2)_grayscale(1)]"
-      />
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 hover:opacity-100">
-        <img
-          src="/07.svg"
-          alt="Logo Autoescola 909 em destaque"
-          className="h-full w-full object-contain [filter:sepia(1)_saturate(7)_hue-rotate(350deg)_brightness(1.08)]"
-        />
+    <div className="group relative mx-auto aspect-[16/7] w-full max-w-[680px]">
+      <div
+        aria-hidden="true"
+        style={heroLogoMaskStyle}
+        className="pointer-events-none absolute inset-0 opacity-20"
+      >
+        <div className="h-full w-full bg-white/70 blur-[0.2px]"></div>
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.2),transparent_65%)] mix-blend-screen"></div>
+      <div
+        aria-hidden="true"
+        style={heroLogoMaskStyle}
+        className="pointer-events-none absolute inset-0 opacity-55 blur-[1px]"
+      >
+        <div className="h-full w-full bg-[var(--color-brand-gold)]/45"></div>
+      </div>
+      <div
+        aria-hidden="true"
+        style={heroLogoMaskStyle}
+        className="pointer-events-none absolute inset-0 opacity-70 transition-opacity duration-700 group-hover:opacity-100"
+      >
+        <div className="h-full w-full bg-[linear-gradient(90deg,rgba(247,210,128,0.95),rgba(229,185,90,1),rgba(184,141,48,0.95))]"></div>
+      </div>
+      <div className="pointer-events-none absolute inset-[-6%] bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.28),transparent_58%)] opacity-80 blur-2xl"></div>
+      <img src="/07.svg" alt="Logo Autoescola 909" className="absolute inset-0 h-full w-full object-contain opacity-0" />
     </div>
   </div>
 );
