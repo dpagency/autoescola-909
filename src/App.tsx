@@ -28,6 +28,28 @@ const Section = ({ children, className = '', id = '' }: { children: React.ReactN
 
 const WHATSAPP_URL = 'https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Autoescola%20909.';
 
+const HeroLogo = () => (
+  <div className="mb-6 relative w-full max-w-[720px] px-4">
+    <div className="relative mx-auto aspect-[16/7] w-full max-w-[680px]">
+      <object
+        data="/05.ai"
+        type="application/pdf"
+        aria-label="Logo Autoescola 909"
+        className="pointer-events-none h-full w-full opacity-25 [filter:brightness(2.4)_grayscale(1)]"
+      />
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 hover:opacity-100">
+        <object
+          data="/05.ai"
+          type="application/pdf"
+          aria-label="Logo Autoescola 909 em destaque"
+          className="h-full w-full [filter:sepia(1)_saturate(7)_hue-rotate(350deg)_brightness(1.1)]"
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.2),transparent_65%)] mix-blend-screen"></div>
+    </div>
+  </div>
+);
+
 export default function App() {
   const { scrollYProgress } = useScroll();
   const yHero = useTransform(scrollYProgress, [0, 1], [0, 250]);
@@ -105,19 +127,9 @@ export default function App() {
             initial={{ scale: 0.9, filter: 'blur(10px)', opacity: 0 }}
             animate={{ scale: 1, filter: 'blur(0px)', opacity: 1 }}
             transition={{ duration: 1.5, ease: 'easeOut' }}
-            className="mb-6 relative"
+            className="mb-6 relative w-full"
           >
-            <h1
-              className="font-display font-bold text-[100px] md:text-[160px] lg:text-[200px] leading-none tracking-tighter"
-              style={{ WebkitTextStroke: '1.5px rgba(255,255,255,0.08)', color: 'transparent' }}
-            >
-              909
-            </h1>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h1 className="font-display font-bold text-[100px] md:text-[160px] lg:text-[200px] leading-none tracking-tighter gold-gradient-text opacity-0 hover:opacity-100 transition-opacity duration-700 cursor-default">
-                909
-              </h1>
-            </div>
+            <HeroLogo />
           </motion.div>
 
           <motion.h2
