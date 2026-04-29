@@ -64,7 +64,7 @@ const HeroLogo = () => (
         <div className="h-full w-full bg-[linear-gradient(90deg,rgba(247,210,128,0.95),rgba(229,185,90,1),rgba(184,141,48,0.95))]"></div>
       </div>
       <div className="pointer-events-none absolute inset-[-6%] bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.28),transparent_58%)] opacity-80 blur-2xl"></div>
-      <img src="/07.svg" alt="Logo Autoescola 909" className="absolute inset-0 h-full w-full object-contain opacity-0" />
+      <img src="/07.svg" alt="Logo AUTOESCOLA 909" className="absolute inset-0 h-full w-full object-contain opacity-0" />
     </div>
   </div>
 );
@@ -81,8 +81,8 @@ export default function App() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 bg-[var(--color-brand-black)]/80 backdrop-blur-md border-b border-white/5">
         <div className="flex items-center gap-3">
-          <img src="/06.png" alt="Autoescola 909" className="h-8 w-8 object-contain" />
-          <span className="font-display font-semibold text-lg tracking-tight">Autoescola <span className="gold-gradient-text">909</span></span>
+          <img src="/06.png" alt="AUTOESCOLA 909" className="h-8 w-8 object-contain" />
+          <span className="font-display font-semibold text-lg tracking-tight">AUTOESCOLA <span className="gold-gradient-text">909</span></span>
         </div>
         <div className="hidden md:flex items-center gap-8 font-mono text-xs tracking-widest uppercase text-gray-400">
           <a href="#cursos" className="hover:text-white transition-colors">Cursos</a>
@@ -157,7 +157,7 @@ export default function App() {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-2xl md:text-4xl font-light tracking-wide text-gray-300 md:leading-snug max-w-3xl"
           >
-            Sua CNH com <span className="font-semibold text-white italic">confiança</span>, sem medo de dirigir.
+            SUA CNH SEM MEDO DE DIRIGIR
           </motion.h2>
 
           <motion.div
@@ -536,7 +536,7 @@ export default function App() {
       <footer className="border-t border-white/5 py-10 px-6 lg:px-24 flex flex-col md:flex-row items-center justify-between font-mono text-xs text-gray-600 uppercase tracking-widest bg-black gap-6">
         <div className="flex items-center gap-3">
           <img src="/06.png" alt="Logo 909" className="h-5 w-5 object-contain opacity-50" />
-          <span>© {new Date().getFullYear()} Autoescola 909. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} AUTOESCOLA 909. Todos os direitos reservados.</span>
         </div>
         <div className="flex gap-8">
           <a href="#cursos" className="hover:text-white transition-colors">Cursos</a>
