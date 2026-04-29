@@ -42,46 +42,72 @@ const heroLogoMaskStyle = {
 const HeroLogo = () => (
   <div className="mb-6 relative w-full max-w-[860px] px-4">
     <motion.div
-      initial={{ opacity: 0, y: 24, scale: 0.94, filter: 'blur(10px)' }}
-      animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
-      transition={{ duration: 1.2, delay: 0.35, ease: 'easeOut' }}
+      initial={{ opacity: 0, scale: 0.8, filter: 'blur(20px)' }}
+      animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+      transition={{ duration: 1.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
       className="group relative mx-auto aspect-[16/7] w-full max-w-[820px]"
     >
+      {/* Outer ambient glow — pulsa lentamente */}
       <motion.div
-        animate={{ opacity: [0.22, 0.34, 0.22], scale: [0.98, 1.01, 0.98] }}
-        transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
-        className="pointer-events-none absolute inset-[-14%] rounded-full bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.22),rgba(229,185,90,0.08)_32%,transparent_68%)] blur-3xl"
+        animate={{ opacity: [0.5, 0.85, 0.5], scale: [0.95, 1.06, 0.95] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute inset-[-20%] rounded-full bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.35),rgba(229,185,90,0.1)_38%,transparent_65%)] blur-3xl"
       />
 
+      {/* Inner halo tight — glow neon ao redor da silhueta */}
+      <motion.div
+        animate={{ opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        aria-hidden="true"
+        style={{
+          ...heroLogoMaskStyle,
+          WebkitMaskSize: '101%',
+          maskSize: '101%',
+        }}
+        className="pointer-events-none absolute inset-0 blur-[14px]"
+      >
+        <div className="h-full w-full bg-[var(--color-brand-gold)]"></div>
+      </motion.div>
+
       <div className="absolute inset-0 translate-x-[6.2%]">
+        {/* Camada base: forma nítida dourada escura */}
         <div
           aria-hidden="true"
           style={heroLogoMaskStyle}
-          className="pointer-events-none absolute inset-0 opacity-18"
+          className="pointer-events-none absolute inset-0 opacity-100"
         >
-          <div className="h-full w-full bg-white/60"></div>
+          <div className="h-full w-full bg-[rgba(120,88,20,0.6)]"></div>
         </div>
+
+        {/* Camada principal: gradiente dourado brilhante */}
+        <motion.div
+          aria-hidden="true"
+          style={heroLogoMaskStyle}
+          animate={{ opacity: [0.88, 1, 0.88] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+          className="pointer-events-none absolute inset-0"
+        >
+          <div className="h-full w-full bg-[linear-gradient(135deg,rgba(255,230,140,1)_0%,rgba(229,185,90,1)_35%,rgba(184,141,48,0.95)_65%,rgba(247,210,128,1)_100%)]"></div>
+        </motion.div>
+
+        {/* Camada de glow interno sobre a forma */}
         <div
           aria-hidden="true"
           style={heroLogoMaskStyle}
-          className="pointer-events-none absolute inset-0 opacity-45 blur-[0.8px]"
+          className="pointer-events-none absolute inset-0 blur-[8px] opacity-60 mix-blend-screen"
         >
-          <div className="h-full w-full bg-[var(--color-brand-gold)]"></div>
+          <div className="h-full w-full bg-[linear-gradient(135deg,rgba(255,245,200,0.9),rgba(229,185,90,0.7),rgba(255,220,100,0.8))]"></div>
         </div>
+
+        {/* Reflexo de luz no topo */}
         <div
           aria-hidden="true"
           style={heroLogoMaskStyle}
-          className="pointer-events-none absolute inset-0 opacity-90 transition-opacity duration-700 group-hover:opacity-100"
+          className="pointer-events-none absolute inset-0 opacity-30 mix-blend-overlay"
         >
-          <div className="h-full w-full bg-[linear-gradient(180deg,rgba(247,210,128,0.98),rgba(229,185,90,0.96)_40%,rgba(184,141,48,0.92))]"></div>
+          <div className="h-full w-full bg-[linear-gradient(160deg,rgba(255,255,255,0.9)_0%,transparent_45%)]"></div>
         </div>
-        <div
-          aria-hidden="true"
-          style={heroLogoMaskStyle}
-          className="pointer-events-none absolute inset-0 opacity-55 mix-blend-screen blur-[6px]"
-        >
-          <div className="h-full w-full bg-[linear-gradient(180deg,rgba(247,210,128,0.7),rgba(229,185,90,0.5),rgba(184,141,48,0.2))]"></div>
-        </div>
+
         <img src="/07.svg" alt="Logo AUTOESCOLA 909" className="absolute inset-0 h-full w-full object-contain opacity-0" />
       </div>
     </motion.div>
