@@ -82,15 +82,6 @@ const HeroLogo = () => (
         >
           <div className="h-full w-full bg-[linear-gradient(180deg,rgba(247,210,128,0.7),rgba(229,185,90,0.5),rgba(184,141,48,0.2))]"></div>
         </div>
-        <motion.div
-          aria-hidden="true"
-          animate={{ x: ['-12%', '112%'] }}
-          transition={{ duration: 2.8, delay: 1.1, ease: 'easeInOut' }}
-          style={heroLogoMaskStyle}
-          className="pointer-events-none absolute inset-0 opacity-35"
-        >
-          <div className="h-full w-[24%] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.95),transparent)] blur-sm"></div>
-        </motion.div>
         <img src="/07.svg" alt="Logo AUTOESCOLA 909" className="absolute inset-0 h-full w-full object-contain opacity-0" />
       </div>
     </motion.div>
