@@ -349,7 +349,7 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="md:col-span-7 rounded-3xl overflow-hidden aspect-video relative group"
           >
-            <img src="/01.png" alt="Identidade Visual Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img src="/08.png" alt="Identidade Visual Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-400 tracking-widest uppercase">Identidade da Marca</div>
           </motion.div>
