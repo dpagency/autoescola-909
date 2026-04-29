@@ -487,7 +487,7 @@ export default function App() {
               <img src="/03.png" alt="Frota Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-6 left-6">
-                <div className="font-mono text-xs text-gray-400 tracking-widest uppercase mb-1">Frota Identificada</div>
+                <div className="font-mono text-xs text-gray-400 tracking-widest uppercase mb-1">Adesivagem de Fachada</div>
                 <p className="text-white font-display text-xl">Envelopamento Premium & Presença Urbana</p>
               </div>
             </motion.div>
