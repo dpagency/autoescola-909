@@ -41,31 +41,59 @@ const heroLogoMaskStyle = {
 
 const HeroLogo = () => (
   <div className="mb-6 relative w-full max-w-[720px] px-4">
-    <div className="group relative mx-auto aspect-[16/7] w-full max-w-[680px]">
-      <div
-        aria-hidden="true"
-        style={heroLogoMaskStyle}
-        className="pointer-events-none absolute inset-0 opacity-20"
-      >
-        <div className="h-full w-full bg-white/70 blur-[0.2px]"></div>
+    <motion.div
+      initial={{ opacity: 0, y: 24, scale: 0.94, filter: 'blur(10px)' }}
+      animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+      transition={{ duration: 1.2, delay: 0.35, ease: 'easeOut' }}
+      className="group relative mx-auto aspect-[16/7] w-full max-w-[680px]"
+    >
+      <motion.div
+        animate={{ opacity: [0.22, 0.34, 0.22], scale: [0.98, 1.01, 0.98] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute inset-[-14%] rounded-full bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.22),rgba(229,185,90,0.08)_32%,transparent_68%)] blur-3xl"
+      />
+
+      <div className="absolute inset-0 translate-x-[3.6%]">
+        <div
+          aria-hidden="true"
+          style={heroLogoMaskStyle}
+          className="pointer-events-none absolute inset-0 opacity-18"
+        >
+          <div className="h-full w-full bg-white/60"></div>
+        </div>
+        <div
+          aria-hidden="true"
+          style={heroLogoMaskStyle}
+          className="pointer-events-none absolute inset-0 opacity-45 blur-[0.8px]"
+        >
+          <div className="h-full w-full bg-[var(--color-brand-gold)]"></div>
+        </div>
+        <div
+          aria-hidden="true"
+          style={heroLogoMaskStyle}
+          className="pointer-events-none absolute inset-0 opacity-90 transition-opacity duration-700 group-hover:opacity-100"
+        >
+          <div className="h-full w-full bg-[linear-gradient(180deg,rgba(247,210,128,0.98),rgba(229,185,90,0.96)_40%,rgba(184,141,48,0.92))]"></div>
+        </div>
+        <div
+          aria-hidden="true"
+          style={heroLogoMaskStyle}
+          className="pointer-events-none absolute inset-0 opacity-55 mix-blend-screen blur-[6px]"
+        >
+          <div className="h-full w-full bg-[linear-gradient(180deg,rgba(247,210,128,0.7),rgba(229,185,90,0.5),rgba(184,141,48,0.2))]"></div>
+        </div>
+        <motion.div
+          aria-hidden="true"
+          animate={{ x: ['-12%', '112%'] }}
+          transition={{ duration: 2.8, delay: 1.1, ease: 'easeInOut' }}
+          style={heroLogoMaskStyle}
+          className="pointer-events-none absolute inset-0 opacity-35"
+        >
+          <div className="h-full w-[24%] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.95),transparent)] blur-sm"></div>
+        </motion.div>
+        <img src="/07.svg" alt="Logo AUTOESCOLA 909" className="absolute inset-0 h-full w-full object-contain opacity-0" />
       </div>
-      <div
-        aria-hidden="true"
-        style={heroLogoMaskStyle}
-        className="pointer-events-none absolute inset-0 opacity-55 blur-[1px]"
-      >
-        <div className="h-full w-full bg-[var(--color-brand-gold)]/45"></div>
-      </div>
-      <div
-        aria-hidden="true"
-        style={heroLogoMaskStyle}
-        className="pointer-events-none absolute inset-0 opacity-70 transition-opacity duration-700 group-hover:opacity-100"
-      >
-        <div className="h-full w-full bg-[linear-gradient(90deg,rgba(247,210,128,0.95),rgba(229,185,90,1),rgba(184,141,48,0.95))]"></div>
-      </div>
-      <div className="pointer-events-none absolute inset-[-6%] bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.28),transparent_58%)] opacity-80 blur-2xl"></div>
-      <img src="/07.svg" alt="Logo AUTOESCOLA 909" className="absolute inset-0 h-full w-full object-contain opacity-0" />
-    </div>
+    </motion.div>
   </div>
 );
 
