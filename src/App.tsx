@@ -31,18 +31,16 @@ const WHATSAPP_URL = 'https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber
 const HeroLogo = () => (
   <div className="mb-6 relative w-full max-w-[720px] px-4">
     <div className="relative mx-auto aspect-[16/7] w-full max-w-[680px]">
-      <object
-        data="/05.ai"
-        type="application/pdf"
-        aria-label="Logo Autoescola 909"
-        className="pointer-events-none h-full w-full opacity-25 [filter:brightness(2.4)_grayscale(1)]"
+      <img
+        src="/07.svg"
+        alt="Logo Autoescola 909"
+        className="pointer-events-none h-full w-full object-contain opacity-20 [filter:brightness(2)_grayscale(1)]"
       />
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 hover:opacity-100">
-        <object
-          data="/05.ai"
-          type="application/pdf"
-          aria-label="Logo Autoescola 909 em destaque"
-          className="h-full w-full [filter:sepia(1)_saturate(7)_hue-rotate(350deg)_brightness(1.1)]"
+        <img
+          src="/07.svg"
+          alt="Logo Autoescola 909 em destaque"
+          className="h-full w-full object-contain [filter:sepia(1)_saturate(7)_hue-rotate(350deg)_brightness(1.08)]"
         />
       </div>
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,185,90,0.2),transparent_65%)] mix-blend-screen"></div>
