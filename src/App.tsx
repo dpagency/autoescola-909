@@ -400,7 +400,9 @@ export default function App() {
             <div className="w-[74%] h-full overflow-hidden">
               <img src="/03.png" alt="Frota Autoescola 909" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="w-[26%] h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div className="relative w-[26%] h-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
             <div className="absolute bottom-6 left-6 font-mono text-xs text-gray-400 tracking-widest uppercase">Identidade Veicular</div>
           </motion.div>
 
